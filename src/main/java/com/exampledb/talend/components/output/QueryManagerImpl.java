@@ -197,6 +197,6 @@ public abstract class QueryManagerImpl implements QueryManager {
     }
 
     protected String delimiterToken() {
-        return "`";
+        return "\"";
     }
 }

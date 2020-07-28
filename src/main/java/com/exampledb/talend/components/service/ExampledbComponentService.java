@@ -122,7 +122,7 @@ public class ExampledbComponentService {
         {
             try {
                 Class.forName("org.postgresql.Driver");
-                connection = DriverManager.getConnection("jdbc:postgres://"+datastore.getServer()+":"+datastore.getPort()+"/"+datastore.getDatabase()
+                connection = DriverManager.getConnection("jdbc:postgresql://"+datastore.getServer()+":"+datastore.getPort()+"/"+datastore.getDatabase()
                                 + "?rewriteBatchedStatements=" + String.valueOf(rewriteBatchedStatements),
                         datastore.getUsername(), datastore.getPassword());
                 connection.setAutoCommit(isAutoCommit);

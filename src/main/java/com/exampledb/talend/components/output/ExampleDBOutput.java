@@ -94,7 +94,6 @@ public class ExampleDBOutput implements Serializable {
         // Note: if you don't need it you can delete it
         try {
             final List<Reject> discards = queryManager.execute(records, datasource);
-            records.clear();
             discards.stream().map(Object::toString).forEach(LOG::error);
         } catch (final SQLException e) {
             records.stream().map(r -> new Reject(e.getMessage(), r)).map(Reject::toString).forEach(LOG::error);
